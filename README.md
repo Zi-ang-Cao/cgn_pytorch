@@ -4,6 +4,9 @@ https://github.com/alinasarmiento/pytorch_contactnet. Original Tensorflow implem
 
 
 ## Installation Instructions
+* I verified that `cgn-pytorch` is not working on M2 MacBook Air. But, it is working on 4070Ti with CUDA 11.8.
+
+### On 4070Ti
 
 `pip install torch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 --index-url https://download.pytorch.org/whl/cu118`
 
