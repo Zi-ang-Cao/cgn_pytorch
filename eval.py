@@ -130,6 +130,11 @@ if __name__=='__main__':
     ### Get pcd, pass into model
     print('inferring.')
     pred_grasps, pred_success, downsample = cgn_infer(contactnet, pointcloud, obj_mask, threshold=args.threshold)
+    # print all returned values!!!
+    print('downsample:', downsample)
+    print('pred_grasps:', pred_grasps)
+    print('pred_success:', pred_success)
+    
     print('model pass.', pred_grasps.shape[0], 'grasps found.')
     
     ### Visualize
