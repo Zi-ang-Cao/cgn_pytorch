@@ -65,7 +65,7 @@ def cgn_infer(cgn, pcd, obj_mask=None, threshold=0.5):
     #idx = torch.linspace(0, pcd.shape[0]-1, 2048).to(dtype=torch.int64).to(cgn.device)
     
     if obj_mask is not None:
-        obj_mask = torch.Tensor(obj_mask[downsample])
+        obj_mask = torch.Tensor(obj_mask[downsample]).to(cgn.device)
         obj_mask = obj_mask[idx]
     else:
         obj_mask = torch.ones(idx.shape[0])
